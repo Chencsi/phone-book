@@ -1,0 +1,115 @@
+{
+  "contacts":[
+    {
+      "id": 1,
+      "name": "Kovács Kálmán",
+      "phone": "+36-20-123-45-67",
+      "email": "kovacs.kalman@vallalat.hu",
+      "birth": "1985-07-30",
+      "company": "Vállalat Rt.",
+      "role": "Irodavezető",
+      "address": "2000 Szentendre, Károly út 40/B",
+      "notes": ""
+    },
+    {
+      "id": 2,
+      "name": "Nagy Anna",
+      "phone": "+36-30-987-65-43",
+      "email": "nagy.anna@ceg.hu",
+      "birth": "1990-05-15",
+      "company": "Cég Kft.",
+      "role": "Pénzügyi vezető",
+      "address": "1102 Budapest, Béke út 12.",
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "name": "Szabó Péter",
+      "phone": "+36-70-555-44-33",
+      "email": "szabo.peter@iroda.com",
+      "birth": "1978-12-18",
+      "company": "Iroda Zrt.",
+      "role": "Projektmenedzser",
+      "address": "1138 Budapest, Váci út 22.",
+      "notes": ""
+    },
+    {
+      "id": 4,
+      "name": "Kiss Éva",
+      "phone": "+36-1-234-56-78",
+      "email": "eva.kiss@tanar.hu",
+      "birth": "1982-09-25",
+      "company": "Iskola Alapítvány",
+      "role": "Tanár",
+      "address": "1045 Budapest, Kossuth tér 5.",
+      "notes": ""
+    },
+    {
+      "id": 5,
+      "name": "Horváth Gábor",
+      "phone": "+36-70-876-54-32",
+      "email": "gabor.horvath@gyar.com",
+      "birth": "1975-03-10",
+      "company": "Gyár Kht.",
+      "role": "Műszakvezető",
+      "address": "2040 Budaörs, Gyár utca 2.",
+      "notes": ""
+    },
+    {
+      "id": 6,
+      "name": "Farkas Zsuzsa",
+      "phone": "+36-20-333-22-11",
+      "email": "zsuzsa.farkas@ceg2.hu",
+      "birth": "1993-11-05",
+      "company": "Cég 2 Kft.",
+      "role": "HR asszisztens",
+      "address": "1111 Budapest, Fő út 10.",
+      "notes": ""
+    },
+    {
+      "id": 7,
+      "name": "Tóth István",
+      "phone": "+36-70-777-88-99",
+      "email": "istvan.toth@termeles.com",
+      "birth": "1980-08-20",
+      "company": "Termelés Zrt.",
+      "role": "Termelési vezető",
+      "address": "1134 Budapest, Gyár út 8.",
+      "notes": ""
+    },
+    {
+      "id": 8,
+      "name": "Papp János",
+      "phone": "+36-30-222-33-44",
+      "email": "janos.papp@ceg3.com",
+      "birth": "1970-01-12",
+      "company": "Cég 3 Rt.",
+      "role": "Ügyvezető",
+      "address": "1020 Budapest, Részlet út 6.",
+      "notes": ""
+    },
+    {
+      "id": 9,
+      "name": "Varga Emese",
+      "phone": "+36-70-111-22-33",
+      "email": "emese.varga@uzlet.hu",
+      "birth": "1987-04-03",
+      "company": "Üzlet Kht.",
+      "role": "Értékesítési menedzser",
+      "address": "1095 Budapest, Bolt út 14.",
+      "notes": ""
+    },
+    {
+      "id": 10,
+      "name": "Molnár Gergő",
+      "phone": "+36-20-777-88-99",
+      "email": "gergo.molnar@marketing.com",
+      "birth": "1995-06-22",
+      "company": "Marketing Bt.",
+      "role": "Marketing asszisztens",
+      "address": "1137 Budapest, Reklám tér 3.",
+      "notes": ""
+    }
+  ]
+  
+}
