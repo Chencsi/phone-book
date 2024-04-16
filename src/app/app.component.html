@@ -7,18 +7,20 @@
   <title>Document</title>
 </head>
 
-<body class="bg-yellow-400">
-  <header>
-    <app-navbar></app-navbar>
-  </header>
-
-  <main class="max-w-[1000px] block mx-auto p-5 rounded-lg">
-    <router-outlet></router-outlet>
-  </main>
-
-  <footer>
-    <app-footer></app-footer>
-  </footer>
+<body>
+  <div class="bg-yellow-400">
+    <header>
+      <app-navbar></app-navbar>
+    </header>
+  
+    <main class="max-w-screen-lg block mx-auto px-5 mt-10 pb-20 rounded-lg">
+      <router-outlet></router-outlet>
+    </main>
+  
+    <footer>
+      <app-footer></app-footer>
+    </footer>
+  </div>
 
 </body>
 
