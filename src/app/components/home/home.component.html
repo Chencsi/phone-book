@@ -1,30 +1,30 @@
-<h1>Contacts</h1>
+<h1 class="text-6xl font-extrabold mt-1 mb-6 outline-white uppercase drop-shadow">All <span class="text-green-600">Your</span> Contacts</h1>
 
-<div class="relative overflow-x-auto">
-    <table class="w-full text-sm text-left text-gray-400">
-        <thead class="text-xs uppercase bg-gray-700 text-gray-400">
+<div class="relative overflow-x-auto shadow-lg rounded-lg">
+    <table class="w-full text-sm text-left relative">
+        <thead class="text-xl uppercase bg-green-400 text-stone-700">
             <tr>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="pl-12 py-3">
                     name
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="pl-12 py-3">
                     phone number
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="pl-12 py-3">
                     e-mail
                 </th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="bg-stone-800 text-stone-400">
             @for (contact of contacts; track contact) {
-            <tr class="border-b bg-gray-800 border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap text-white">
+            <tr class="border-b border-stone-500">
+                <th scope="row" class="pl-12 py-4 font-medium whitespace-nowrap">
                     {{ contact.name }}
                 </th>
-                <td class="px-6 py-4">
+                <td class="pl-12 py-4">
                     {{ contact.phone }}
                 </td>
-                <td class="px-6 py-4">
+                <td class="pl-12 py-4">
                     {{ contact.email }}
                 </td>
             </tr>
