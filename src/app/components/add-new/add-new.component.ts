@@ -39,6 +39,7 @@ export class AddNewComponent {
   onSubmit(): void {
     const value = this.contactForm.value;
     const contact = {
+      id: this.db.nexId,
       name: value.name as string,
       phone: value.phone as string,
       email: value.email as string
