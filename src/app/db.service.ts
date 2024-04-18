@@ -11,6 +11,7 @@ export class DbService {
   private contacts: Contact[];
   public onContactsLoaded: Subject<boolean> = new Subject<boolean>;
   public onContactsChanged: Subject<boolean> = new Subject<boolean>;
+  public onNewContactAdded: Subject<boolean> = new Subject<boolean>;
   constructor(private http: HttpClient) {
     this.fetchContacts();
     const ls = localStorage.getItem('contacts');
@@ -33,27 +34,33 @@ export class DbService {
     return this.contacts;
   }
 
-  getContacts() : Contact[] {
+  getContacts(): Contact[] {
     return this.contacts;
   }
 
-  loadBook() : void {
+  loadBook(): void {
     let data: any = localStorage.getItem('contacts');
     if (data !== null) {
       this.contacts = JSON.parse(data);
     }
   }
 
-  saveBook() : void {
+  saveBook(): void {
     localStorage.setItem('contacts', JSON.stringify(this.contacts));
   }
 
-  addContact(contact: Contact) : void {
-    this.contacts.push(contact)
+  async addContact(contact: { name: string, phone: string, email: string }) {
+    await new Promise((resolve, reject) => {
+      this.http.post(`${this.baseUrl}contacts`, contact).subscribe((resp) => {
+        this.contacts.push(resp as Contact);
+        this.onNewContactAdded.next(true);
+        resolve(null);
+      });
+    });
     this.saveBook();
   }
 
-  removeContact(id: number) : void {
+  removeContact(id: number): void {
     const index = this.contacts.findIndex((contact) => contact.id === id);
     this.contacts.splice(index, 1);
     this.saveBook();

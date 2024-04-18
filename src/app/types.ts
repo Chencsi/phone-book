@@ -3,9 +3,9 @@ export interface Contact {
     name: string
     phone: string
     email: string
-    birth: string
-    company: string
-    role: string
-    address: string
-    notes: string
+    birth?: string
+    company?: string
+    role?: string
+    address?: string
+    notes?: string
 }
