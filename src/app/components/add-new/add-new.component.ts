@@ -3,11 +3,12 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { DbService } from '../../db.service';
 import { Contact } from '../../types';
 import { Router } from '@angular/router';
+import { PhoneInputDirective } from '../../phone-input.directive';
 
 @Component({
   selector: 'app-add-new',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, PhoneInputDirective],
   templateUrl: './add-new.component.html',
   styleUrl: './add-new.component.scss'
 })
@@ -38,10 +39,25 @@ export class AddNewComponent {
 
   onSubmit(): void {
     const value = this.contactForm.value;
+    const phone = value.phone as string;
+
+    const newValue = phone.replace('06', '+36').split('');
+    let hyphenatedValue = '';
+
+    newValue.splice(3, 0, "-")
+    newValue.splice(6, 0, "-")
+    newValue.splice(10, 0, "-")
+    newValue.splice(13, 0, "-")
+
+    for (let i = 0; i < newValue.length; i++) {
+      const char = newValue[i];
+      hyphenatedValue += char;
+    }
+
     const contact = {
       id: this.db.nexId,
       name: value.name as string,
-      phone: value.phone as string,
+      phone: hyphenatedValue as string,
       email: value.email as string
     }
     this.db.addContact(contact)
