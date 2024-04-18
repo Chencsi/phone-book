@@ -3,35 +3,33 @@
     <span class="text-green-600">My</span>
     <span>Contacts</span>
 </div>
-<div class="shadow-lg rounded-lg">
-    <table class="w-full text-sm text-left">
-        <thead class="text-xl uppercase bg-green-400 text-stone-700">
-            <tr>
-                <th scope="col" class="pl-12 py-3">
-                    name
-                </th>
-                <th scope="col" class="pl-12 py-3">
-                    phone number
-                </th>
-                <th scope="col" class="pl-12 py-3">
-                    e-mail
-                </th>
-            </tr>
-        </thead>
-        <tbody class="bg-stone-800 text-stone-400">
-            @for (contact of contacts; track contact) {
-            <tr class="border-b border-stone-500">
-                <th scope="row" class="pl-12 py-4 font-medium whitespace-nowrap">
-                    {{ contact.name }}
-                </th>
-                <td class="pl-12 py-4">
-                    {{ contact.phone }}
-                </td>
-                <td class="pl-12 py-4">
-                    {{ contact.email }}
-                </td>
-            </tr>
-            }
-        </tbody>
-    </table>
-</div>
+<table class="w-full text-sm text-left rounded-2xl overflow-hidden">
+    <thead class="text-xl uppercase bg-green-400 text-stone-700">
+        <tr>
+            <th scope="col" class="pl-12 py-3">
+                name
+            </th>
+            <th scope="col" class="pl-12 py-3">
+                phone number
+            </th>
+            <th scope="col" class="pl-12 py-3">
+                e-mail
+            </th>
+        </tr>
+    </thead>
+    <tbody class="bg-stone-800 text-stone-400">
+        @for (contact of contacts; track contact) {
+        <tr class="border-b border-stone-500">
+            <th scope="row" class="pl-12 py-4 font-medium whitespace-nowrap">
+                {{ contact.name }}
+            </th>
+            <td class="pl-12 py-4">
+                {{ contact.phone }}
+            </td>
+            <td class="pl-12 py-4">
+                {{ contact.email }}
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
